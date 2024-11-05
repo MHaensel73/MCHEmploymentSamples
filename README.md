@@ -7,7 +7,7 @@ For years, I made my students upload sample projects to GitHub. Since I'm back i
 
 Material is separated into folders for review:
 
-* *Code/* MCH small code samples, both from course material and programs for personal use.
+* *Code/* Small code samples from course material and programs for personal use.
 
 * *Labs/* Lab documents to give a sense of MCH's lab style, a combination of Transparency in Learning and Teaching (TiLT) and Universal Design (UD).
 
