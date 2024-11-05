@@ -2,6 +2,7 @@
 
 For years, I made my students upload sample projects to GitHub. Since I'm back in the job market, it makes sense to do the same thing myself.
 
+
 ## Getting Started
 
 Material is separated into folders for review:
@@ -11,6 +12,7 @@ Code: MCH small code samples, both from course material and programs for persona
 Labs: Lab documents to give a sense of MCH's lab style, a combination of Transparency in Learning and Teaching (TiLT) and Universal Design (UD).
 
 Lectures: PowerPoints to give a sense of MCH's lecture style.
+
 
 ### Where to start
 
@@ -30,6 +32,7 @@ The "Labs/JavaScript W7 Idle Clicker Game" can be opened in any web browser. Stu
 The "CodeJavaScript traverse XML nodes" folder should be opened using File -> Open -> Web Site . . . in Visual Studio Enterprise on Windows.
 
 The "Methods Console App Lecture Demo" was created and tested in Visual Studio Enterprise on Windows. It should work in Visual Studio Community. I have not tested it in Visual Studio Code.
+
 
 ## Contributing
 
