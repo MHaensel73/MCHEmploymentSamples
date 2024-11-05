@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<!-- Student name    Today's date -->
+
+<html>
+<head>
+    <title>The Cookie Machine</title>
+
+    <script>
+        // Update the display to reflect current values and state
+        function updateUI() {
+            document.getElementById("numCookies").innerHTML = cookies;
+            document.getElementById("numBakers").innerHTML = bakers;
+            document.getElementById("numSuperBakers").innerHTML = superBakers;
+            document.getElementById("buyBaker").disabled = !(cookies >= 10);
+            document.getElementById("buySuperBaker").disabled = !(cookies >= 50);
+
+            if (cookies > 100)
+                document.getElementById("numCookies").style.fontSize = "x-large";
+            else if (cookies > 50)
+                document.getElementById("numCookies").style.fontSize = "large";
+            else
+                document.getElementById("numCookies").style.fontSize = "initial";
+        }
+
+        // clockTick
+        // Updates the internal timer, calculations, and UI
+        // Runs every 1/2 second
+        function clockTick() {
+            // How many half-seconds have we been running?
+            ticks = (ticks + 1) % 1000;
+
+            // If it's one second, a baker makes a cookier
+            if ((ticks % 2) == 0)
+                cookies += bakers * 1;
+
+            // If it's two seconds, a superBaker makes ten cookies
+            if ((ticks % 4) == 0)
+                cookies += superBakers * 10;
+
+            updateUI();
+        }
+
+        // startTimer
+        // Starts calling the function clockTick every 1/2 second (500 milliseconds)
+        // Calls update UI immediately after page load
+        function startTimer() {
+            setInterval(clockTick, 500);
+            updateUI();
+        }
+
+        // Create variables and set initial values
+        ticks = 0;
+        cookies = 0;
+        bakers = 0;
+        superBakers = 0;
+    </script>
+
+</head>
+
+<!-- Start the timer running AFTER the page is loaded -->
+<!-- See https://stackoverflow.com/questions/807878/javascript-that-executes-after-page-load for more details -->
+
+<body onload="startTimer();">
+    <h1>The Cookie Machine</h1>
+    <p>
+        You have <span id="numCookies">0</span> cookies. <br />
+        You have <span id="numBakers">0</span> bakers and <span id="numSuperBakers">0</span> super bakers.
+    </p>
+    <p>
+        Bakers make 1 cookie per second. <br />
+        Super bakers make 10 cookies every two seconds.
+    </p>
+    <p>
+        <button id="makeCookie" onclick="cookies += 1; updateUI();">Make a cookie</button>
+    </p>
+    <p>
+        <button id="buyBaker" onclick="bakers += 1; cookies -= 10; updateUI();">Buy a baker</button> for 10 cookies.<br />
+    </p>
+    <p>
+        <button id="buySuperBaker" onclick="superBakers += 1; cookies -= 50; updateUI();">Buy a super baker</button> for 50 cookies.<br />
+    </p>
+</body>
+</html>

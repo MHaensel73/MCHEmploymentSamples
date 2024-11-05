@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- [Student Name]  [today's date] -->
+<!-- Thanks to Vue.js in Action (2018) by Hanchett -->
+<!-- Enhancement 1:   -->
+<!-- Enhancement 2:   -->
+
+<html>
+<head>
+    <script src="https://unpkg.com/vue@3.2"></script>
+</head>
+<body>
+    <div id="app">
+        <my-component :num="myNumber" :str="passedString"
+                      :even="myNumber" :obj="passedObject"></my-component>
+          
+        <p></p>
+        <p>Counter: {{counter}}<br /></p>
+        <button v-on:click="incrementCounter">Increment Counter</button>
+        <my-button v-on:increment-me="incrementCounter"></my-button>
+
+
+    </div>
+    <script>
+      const { createApp } = Vue
+
+        a = createApp({
+            data() {
+                return {
+                    passedString: 'Hello From Parent!',
+                    myNumber: 43,
+                    passedObject: { message: 'Passed Object' },
+                    counter: 0
+                }
+            },
+            methods: {
+                incrementCounter() { this.counter++; }
+            }
+        }
+        );
+
+       a.component('MyComponent', {
+            template: '<div>Number: {{num}}<br />String: {{str}} \
+              <br />IsEven?: {{even}}<br/>Object:{{obj.message}}</div>',
+            props: {
+                num: {
+                    type: Number,
+                    required: true
+                },
+                str: {
+                    type: String,
+                    default: "Hello World"
+                },
+                obj: {
+                    type: Object,
+                    default: () => {
+                        return { message: 'Hello from object' }
+                    }
+                },
+                even: {
+                    validator: (value) => {
+                        return (value % 2 === 0)
+                    }
+                }
+            }
+       }); 
+
+        a.component('MyButton', {
+            template: `<div>
+      <button v-on:click="childIncrementCounter">Increment From Child</button>
+    </div>`,
+            methods: {
+                childIncrementCounter() {
+                    this.$emit('increment-me');
+                }
+            }
+        });
+
+
+
+      a.mount("#app");
+    </script>
+</body>
+</html>

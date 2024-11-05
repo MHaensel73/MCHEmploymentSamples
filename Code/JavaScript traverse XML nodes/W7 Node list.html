@@ -1,0 +1,54 @@
+<html>
+<!-- Student Name Here -->
+<head>
+    <script>
+        var fileName = "albums.xml";
+        var recursionLevel = 0;
+
+        // This is a great place for a breakpoint
+        var x = loadXMLDoc(fileName);
+
+        if (!x)
+            alert("XML file did not load.");
+        else
+            traverse(x.documentElement);
+
+        function traverse(currentNode) {
+            outputNode(currentNode, recursionLevel);
+
+            if (currentNode.childNodes.length > 0) {
+                document.write(spaces(recursionLevel) + "Child nodes: " + currentNode.childNodes.length + "<br />");
+
+                recursionLevel++;
+                for (var i = 0; i < currentNode.childNodes.length; i++) {
+                    // outputNode(currentNode, recursionLevel)
+                    traverse(currentNode.childNodes[i]);
+                }
+                recursionLevel--;
+            }
+        }
+
+        function outputNode(a, recursionLevel) {
+            document.write(spaces(recursionLevel) + "**********<br />");
+            document.write(spaces(recursionLevel) + "NodeName: " + a.nodeName + "<br />");
+            document.write("<br />");
+        }
+
+        function spaces(n) {
+            var myStr = "";
+            for (var i = 0; i < n; i++)
+                myStr += "&nbsp&nbsp&nbsp&nbsp";
+            return (myStr);
+        }
+
+        function loadXMLDoc(filename) {
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+    </script>
+
+</head>
+<body>
+</body>
