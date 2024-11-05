@@ -3,7 +3,7 @@
 For years, I made my students upload sample projects to GitHub. Since I'm back in the job market, it makes sense to do the same thing myself.
 
 
-## Getting Started
+## Getting started
 
 Material is separated into folders for review:
 
