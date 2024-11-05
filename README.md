@@ -5,14 +5,21 @@ For years, I made my students upload sample projects to GitHub. Since I'm back i
 ## Getting Started
 
 Material is separated into folders for review:
+
 Code: MCH small code samples, both from course material and programs for personal use.
+
 Labs: Lab documents to give a sense of MCH's lab style, a combination of Transparency in Learning and Teaching (TiLT) and Universal Design (UD).
+
 Lectures: PowerPoints to give a sense of MCH's lecture style.
 
 ### Where to start
+
 Lectures/Mental Models.pptx is a brief introduction to how people make sense of the things they use.
+
 Labs/JavaScript W7 Idle Clicker Game.html runs in any web browser and is fun for a few minutes.
+
 Code/Create-Subtitles is how I solved the problem of creating subtitles for every saved movie on my computer.
+
 
 ### How to use
 
