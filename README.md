@@ -13,6 +13,7 @@ Material is separated into folders for review:
 
 * *Lectures/* PowerPoints to give a sense of MCH's lecture style.
 
+* Other folders may be added to demonstrate additional job skills.
 
 ### Where to start
 
