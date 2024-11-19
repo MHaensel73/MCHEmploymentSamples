@@ -21,7 +21,7 @@ Material is separated into folders for review:
 
 * *Labs/JavaScript W7 Idle Clicker Game.html* runs in any web browser and is fun for a few minutes.
 
-* *Code/Create-Subtitles* is how I solved the problem of creating subtitles for every saved movie on my computer.
+* *Code/Create-Subtitles* is how I solved the problem of creating subtitles for every movie/video file on my computer.
 
 
 ### How to use
