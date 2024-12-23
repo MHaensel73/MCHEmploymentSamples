@@ -1,13 +1,12 @@
 # MCHEmploymentSamples
 
-For years, I made my students upload sample projects to GitHub. Since I'm back in the job market, it makes sense to do the same thing myself.
-
+This repository includes some examples of MCH's work over the years.
 
 ## Getting started
 
 Material is separated into folders for review:
 
-* *Analsys/* Data organization and analysis samples that show I can use a spreadsheet
+* *Analysis/* Data organization and analysis samples that show I can use a spreadsheet
 
 * *Code/* Small code samples from course material and programs for personal use.
 
@@ -32,7 +31,7 @@ The "Labs/JavaScript W7 Idle Clicker Game" can be opened in any web browser. Stu
 
 "Labs/VueJS W04 VueJs3-Props-and-events" page can be opened in any web browser.
 
-The "CodeJavaScript traverse XML nodes" folder should be opened using File -> Open -> Web Site . . . in Visual Studio Enterprise on Windows.
+The "Code/JavaScript traverse XML nodes" folder should be opened using File -> Open -> Web Site . . . in Visual Studio Enterprise on Windows.
 
 The "Methods Console App Lecture Demo" was created and tested in Visual Studio Enterprise on Windows. It should work in Visual Studio Community. I have not tested it in Visual Studio Code.
 
